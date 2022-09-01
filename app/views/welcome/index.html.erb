@@ -1,0 +1,16 @@
+<h1>Welcome</h1>
+
+<br>
+
+<%= link_to "Sign up", sign_up_path %>
+
+<%= link_to "Log in", sign_in_path %>
+
+
+<% if @user %>
+    Logged in as: <%= @user.email %>
+
+    <%= button_to "Logout", logout_path, method: :delete%>
+
+
+<% end %>
